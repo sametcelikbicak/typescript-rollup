@@ -4,15 +4,20 @@
   "description": "This is template repository for creating new app using HTML & CSS & TypeScript with Rollup bundler.",
   "type": "module",
   "scripts": {
-    "browsersync":"npx browser-sync start --server 'public' --port 12345 --files 'public'",
-    "dev": "npx rollup --config rollup.config.js --watch & npm run browsersync"
+    "browsersync": "npx browser-sync start --server 'public' --port 12345 --files 'public'",
+    "dev": "npx rollup --config rollup.config.js --watch & npm run browsersync",
+    "test": "vitest --run --silent",
+    "coverage": "vitest run --coverage"
   },
   "devDependencies": {
     "@rollup/plugin-typescript": "^9.0.1",
+    "@vitest/coverage-c8": "^0.24.4",
     "browser-sync": "^2.27.10",
+    "jsdom": "^20.0.2",
     "rollup": "^3.2.3",
     "tslib": "^2.4.0",
-    "typescript": "^4.6.4"
+    "typescript": "^4.6.4",
+    "vitest": "^0.24.4"
   },
   "keywords": [
     "typescript",
